@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.705
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project1", "Project1.vcxproj", "{829E5771-D3AD-4146-89D1-402F199A04B1}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project1", "Project1\Project1.vcxproj", "{829E5771-D3AD-4146-89D1-402F199A04B1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "math", "..\math\math.vcxproj", "{08D27925-4562-46CE-AFBB-F5C55C75209E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "math", "math\math.vcxproj", "{08D27925-4562-46CE-AFBB-F5C55C75209E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
