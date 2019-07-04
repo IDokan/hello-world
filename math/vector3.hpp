@@ -6,8 +6,6 @@
 #pragma once
 #pragma warning(push)
 #pragma warning(disable : 4201) // warning C4201 : nonstandard extension used : nameless struct / union
-namespace CS230
-{
     struct [[nodiscard]] vector3
     {
         union {
@@ -58,5 +56,4 @@ namespace CS230
     [[nodiscard]] float distance_between_squared(vector3 a, vector3 b) noexcept;
     [[nodiscard]] float distance_between(vector3 a, vector3 b) noexcept;
     [[nodiscard]] float angle_between(vector3 a, vector3 b) noexcept;
-}
 #pragma warning(pop)

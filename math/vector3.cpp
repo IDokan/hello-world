@@ -6,15 +6,12 @@
 
 *******************************************************************************/
 
-#include <CS230/math/vector3.hpp>
+#include "vector3.hpp"
 #include <cassert>		// for assert()
 #include <limits>
 
 #include <cmath>		// for std::sqrt(), std::abs(), and std::acos()
 
-
-namespace CS230
-{
     vector3::vector3() noexcept 
     : x(0), y(0), z(0) 
     {
@@ -138,4 +135,3 @@ namespace CS230
         // Use Dot Product Theorem
         return std::acos(dot(a, b) / magnitudeOfA / magnitudeOfB);
     }
-}

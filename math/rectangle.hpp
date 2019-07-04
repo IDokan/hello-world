@@ -5,10 +5,8 @@
  */
 #pragma once
 
-#include <CS230/math/vector2.hpp>
+#include "vector2.hpp"
 
-namespace CS230
-{
     struct [[nodiscard]] rectangle
     {
         vector2 min{};
@@ -21,4 +19,3 @@ namespace CS230
         float   CalculateWidth() const noexcept;
         float   CalculateHeight() const noexcept;
     };
-}

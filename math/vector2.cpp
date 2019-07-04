@@ -7,14 +7,12 @@
 *******************************************************************************/
 
 
-#include <CS230\math\vector2.hpp>
+#include "vector2.hpp"
 #include <cassert>		// for assert()
 #include <limits>
 
 #include <cmath>		// for std::abs(), std::cos(), std::sin(), std::sqrt(), std::acos()
 
-namespace CS230
-{
     vector2::vector2() noexcept :x(0), y(0)
     {
     }
@@ -130,5 +128,3 @@ namespace CS230
             cos*v.x - sin*v.y,
             sin*v.x + cos*v.y); 
     }
-
-}

@@ -6,17 +6,14 @@
 
 *******************************************************************************/
 
-
-#include <matrix3.hpp>
-#include <vector2.hpp>
+#include "vector2.hpp"
+#include "matrix3.hpp"
 #include <cassert> // for assert()
 #include <limits>
 
 #include <cmath> // for std::cos(), std::sin()
 #include "angles.hpp"    // for PI, HALF_PI
 
-namespace CS230
-{
     matrix3::matrix3() noexcept : column0(0), column1(0), column2(0) {}
 
     matrix3::matrix3(vector3 first_column, vector3 second_column, vector3 third_column) noexcept
@@ -154,4 +151,3 @@ namespace CS230
     {
         return MATRIX3::build_translation(translation.x, translation.y);
     }
-}
