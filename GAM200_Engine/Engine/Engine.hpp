@@ -1,5 +1,7 @@
 #pragma once
 #include "Timer.hpp"
+class Application;
+
 class Engine
 {
 public:

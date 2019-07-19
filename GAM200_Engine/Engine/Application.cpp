@@ -1,6 +1,13 @@
 #include "Application.hpp"
 #include <iostream>
+#include "Input.hpp"
 
+namespace {
+    void KeyCallback(GLFWwindow *window, int key, int scancode, int action, int mods);
+    void MousePositionCallback(GLFWwindow* window, double x_pos, double y_pos);
+    void MouseButtonCallback(GLFWwindow* window, int button, int action, int mods);
+    void MouseWheelScroll(GLFWwindow* window, double x_offset, double y_offset);
+}
 
 Application* Application::app = nullptr;
 
@@ -43,11 +50,19 @@ void Application::Init()
         std::exit(EXIT_FAILURE);
     }
 
+    glfwMakeContextCurrent(window);
+    glfwSetKeyCallback(window, KeyCallback);
+    glfwSetMouseButtonCallback(window, MouseButtonCallback);
+    glfwSetScrollCallback(window, MouseWheelScroll);
+    glfwSetCursorPosCallback(window, MousePositionCallback);
+
     glfwSwapInterval(true);
 }
 
 void Application::Update(float dt)
 {
+    input.TriggeredReset();
+
     fpsEllapsedTime += dt;
     ++fpsFrames;
     if (fpsEllapsedTime >= 1.0f)
@@ -57,11 +72,33 @@ void Application::Update(float dt)
         fpsEllapsedTime = 0;
         fpsFrames = 0;
     }
-
+    int w, h; // just prototype 
+    glfwGetWindowSize(window, &w, &h); // just prototype 
+    window_size.x = (float)w; // just prototype 
+    window_size.y = (float)h; // just prototype 
     glfwSwapBuffers(window);
     glfwPollEvents();
 }
 
 void Application::Clear()
 {
+}
+
+namespace {
+    void KeyCallback(GLFWwindow *window, int key, int scancode, int action, int mods)
+    {
+        input.SetKeyBoardInput(key, action);
+    }
+    void MousePositionCallback(GLFWwindow* window, double x_pos, double y_pos)
+    {
+        input.SetMousePosition(x_pos, y_pos);
+    }
+    void MouseButtonCallback(GLFWwindow* window, int button, int action, int mods)
+    {
+        input.SetMouseInput(button, action);
+    }
+    void MouseWheelScroll(GLFWwindow* window, double x_offset, double y_offset)
+    {
+        input.SetMouseWheel(x_offset, y_offset);
+    }
 }
