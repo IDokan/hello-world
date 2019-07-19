@@ -132,6 +132,11 @@ bool Input::IsMouseDoubleClicked(int button)
     return mouse_doubleClick[button];
 }
 
+vector2 Input::GetMousePosition()
+{
+    return mousePosition;
+}
+
 double Input::MouseWheelScroll()
 {
     return y_offset;

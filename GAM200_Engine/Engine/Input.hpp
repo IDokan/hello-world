@@ -23,8 +23,8 @@ private:
 
 public:
     void Init();
-
     void TriggeredReset();
+
     void SetKeyBoardInput(int key, int action);
     void SetMouseInput(int button, int action);
     void SetMousePosition(double x, double y);
@@ -45,4 +45,4 @@ public:
 };
 
 extern Input input;
-// if there are 2 input, use extern
+// if there are 2 inputs(two keyboards), use extern

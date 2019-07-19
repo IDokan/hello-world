@@ -39,6 +39,7 @@ void Engine::Update()
     {
         std::cout << "double clicked" << std::endl;
     }
+    std::cout << input.GetMousePosition().x << ", " << input.GetMousePosition().y << std::endl;
 }
 
 void Engine::Clear()
