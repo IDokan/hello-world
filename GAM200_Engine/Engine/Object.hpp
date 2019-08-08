@@ -11,7 +11,19 @@ private:
     Mesh mesh;
     std::vector<Component*>components;
 
+	bool isDead = false;
+
 public:
+	void SetDead(bool condition)
+	{
+		isDead = condition;
+	}
+
+	bool GetIsDead() const
+	{
+		return isDead;
+	}
+
     Transform GetTransform()
     {
         return m_transform;

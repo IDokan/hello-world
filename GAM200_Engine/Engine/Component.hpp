@@ -8,6 +8,6 @@ public:
     virtual void Init(Object* ) = 0;
     virtual void Update(float dt) = 0;
 
-private:
+public:
     Object* m_owner = nullptr;
 };
