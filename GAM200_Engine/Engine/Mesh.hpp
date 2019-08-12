@@ -1,6 +1,11 @@
+/*
+ * Rudy Castan
+ * Graphics Library
+ * CS230
+ */
 #pragma once
 #include "Color4ub.hpp"
-#include <vector2.hpp>
+#include "vector2.hpp"
 #include <cstddef>
 #include <vector>
 

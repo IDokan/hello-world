@@ -133,6 +133,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.hpp" />
+    <ClInclude Include="Color4f.hpp" />
+    <ClInclude Include="Color4ub.hpp" />
     <ClInclude Include="Component.hpp" />
     <ClInclude Include="Engine.hpp" />
     <ClInclude Include="Input.hpp" />
@@ -140,13 +142,18 @@
     <ClInclude Include="Object.hpp" />
     <ClInclude Include="ObjectManager.hpp" />
     <ClInclude Include="Player.hpp" />
+    <ClInclude Include="Shader.hpp" />
     <ClInclude Include="State.hpp" />
     <ClInclude Include="StateManager.hpp" />
+    <ClInclude Include="StockShaders.hpp" />
     <ClInclude Include="Timer.hpp" />
     <ClInclude Include="Transform.hpp" />
+    <ClInclude Include="VertexLayoutDescription.hpp" />
+    <ClInclude Include="Vertices.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Color.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Mesh.cpp">
@@ -157,9 +164,15 @@
     </ClCompile>
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="ObjectManager.cpp" />
+    <ClCompile Include="Shader.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="StateManager.cpp" />
     <ClCompile Include="Transform.cpp" />
+    <ClCompile Include="VertexLayoutDescription.cpp" />
+    <ClCompile Include="Vertices.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StockShaders.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
